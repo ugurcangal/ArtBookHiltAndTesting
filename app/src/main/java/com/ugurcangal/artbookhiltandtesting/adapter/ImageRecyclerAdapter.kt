@@ -58,7 +58,7 @@ class ImageRecyclerAdapter @Inject constructor(val glide : RequestManager) : Rec
         val url = imageList[position]
         holder.itemView.apply {
             glide.load(url).into(imageView)
-            setOnItemClickListener {
+            setOnClickListener {
                 onItemClickListener?.let {
                     it(url)
                 }
